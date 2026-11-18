@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Student Website</title>
+
+    <style>
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fc;
+            color: #222;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #234b70;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            display: inline-block;
+            border-radius: 4px;
+        }
+        nav a:hover { background-color: #416b91; }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section { padding-top: 90px; margin-top: -70px; }
+
+        h2 { color: #234b70; }
+
+        img, video { max-width: 100%; height: auto; margin: 10px 0; border-radius: 6px; }
+        audio { width: 100%; max-width: 400px; }
+
+        table { border-collapse: collapse; background: white; }
+        th, td { border: 1px solid #333; padding: 10px 16px; text-align: left; }
+        th { background-color: #234b70; color: white; }
+
+        form {
+            background: white;
+            padding: 20px;
+            max-width: 450px;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        label { display: block; margin-top: 12px; font-weight: bold; }
+
+        input[type="text"], input[type="email"], input[type="password"],
+        input[type="date"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        input[type="radio"] { margin: 8px 4px 8px 0; }
+        .radio-label { display: inline; font-weight: normal; margin-right: 16px; }
+
+        input[type="submit"], input[type="reset"] {
+            margin-top: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #234b70;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        input[type="reset"] { background-color: #777; }
+        input[type="submit"]:hover { background-color: #416b91; }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            background-color: #234b70;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Student Website</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#registration">Registration</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#media">Audio &amp; Video</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HOME -->
+    <section id="home">
+        <h2>Welcome to My Website</h2>
+        <p>This is my <b>HTML</b> project.</p>
+        <p><i>Learning HTML is interesting.</i></p>
+        <p><u>Welcome Students!</u></p>
+        <p><mark>HTML Practical Assignment</mark></p>
+
+        <img src="https://picsum.photos/400/200" alt="Sample image">
+
+        <h2>My Subjects</h2>
+        <ul>
+            <li>Computer</li>
+            <li>Mathematics</li>
+            <li>Physics</li>
+        </ul>
+
+        <h2>Student Details</h2>
+        <table>
+            <tr><th>Name</th><th>Course</th></tr>
+            <tr><td>Student</td><td>Computer Engineering</td></tr>
+        </table>
+    </section>
+
+    <!-- REGISTRATION -->
+    <section id="registration">
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <label for="reg-name">Name:</label>
+            <input type="text" id="reg-name" name="name" placeholder="Enter your name" required>
+
+            <label for="reg-email">Email:</label>
+            <input type="email" id="reg-email" name="email" placeholder="you@example.com" required>
+
+            <label for="reg-password">Password:</label>
+            <input type="password" id="reg-password" name="password" minlength="6" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male" class="radio-label">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female" class="radio-label">Female</label>
+
+            <label for="course">Course:</label>
+            <select id="course" name="course">
+                <option>Computer Engineering</option>
+                <option>Information Technology</option>
+            </select>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4"></textarea>
+
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear">
+        </form>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section id="feedback">
+        <h2>Give Your Feedback</h2>
+        <form action="#" method="post">
+            <label for="fb-name">Name:</label>
+            <input type="text" id="fb-name" name="name" required>
+
+            <label for="fb-email">Email:</label>
+            <input type="email" id="fb-email" name="email" required>
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+                <option>Excellent</option>
+                <option>Good</option>
+                <option>Average</option>
+            </select>
+
+            <label for="comments">Your Feedback:</label>
+            <textarea id="comments" name="comments" rows="5"></textarea>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </form>
+    </section>
+
+    <!-- AUDIO & VIDEO -->
+    <section id="media">
+        <h2>Insert Audio</h2>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h2>Insert Video</h2>
+        <video width="400" controls poster="https://picsum.photos/400/225">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 My Student Website</p>
+</footer>
+
+</body>
+</html>
